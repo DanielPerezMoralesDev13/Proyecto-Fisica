@@ -3,3 +3,5 @@
 
 # No ignorar archivos .cjs en el directorio lib
 !lib/*.cjs
+
+todo.txt
