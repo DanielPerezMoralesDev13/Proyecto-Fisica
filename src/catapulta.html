@@ -42,7 +42,6 @@
             document.getElementById('xd').innerHTML = `Radianes max 160 -> ${160 * (Math.PI / 180)}`;
             document.getElementById('xd2').innerHTML = `Radianes min 110 -> ${110 * (Math.PI / 180)}`;
 
-
         </script>
     </main>
 
@@ -53,6 +52,11 @@
     <script src="../lib/canvas.cjs"></script>
 
     <button id="lanzarBtn">Lanzar</button>
+
+    <script>
+        // Agregar el evento al botón "Lanzar"
+        document.getElementById('lanzarBtn').addEventListener('click', lanzar);
+    </script>
 
 </body>
 
