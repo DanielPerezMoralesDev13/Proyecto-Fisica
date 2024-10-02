@@ -3,8 +3,10 @@ canvas {
 }
 
 #catapultaCanvas {
-    display: block; /* Asegura que el canvas se comporte como un bloque */
-    margin: 0 auto; /* Centra el canvas horizontalmente */
+    display: block;
+    /* Asegura que el canvas se comporte como un bloque */
+    margin: 0 auto;
+    /* Centra el canvas horizontalmente */
 }
 
 body {
@@ -96,4 +98,31 @@ button:hover {
     font-size: 1rem;
     color: #d9534f;
     margin-top: 1rem;
+}
+
+#lanzarBtn {
+    display: block;
+    width: auto;
+    /* Asegura que el botón se comporte como un bloque */
+    margin: 1rem auto;
+    /* Centra el botón horizontalmente */
+    padding: 0.5rem 1rem;
+    /* Espaciado interno */
+    background-color: #007BFF;
+    /* Color de fondo */
+    color: #fff;
+    /* Color del texto */
+    border: none;
+    /* Sin borde */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    font-size: 1rem;
+    /* Tamaño de fuente */
+    cursor: pointer;
+    /* Cambia el cursor al pasar por encima */
+}
+
+#lanzarBtn:hover {
+    background-color: #0056b3;
+    /* Color de fondo al pasar el mouse */
 }
