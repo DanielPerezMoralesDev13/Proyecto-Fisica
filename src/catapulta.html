@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Catapulta</title>
+    <link rel="stylesheet"
+        href="../style/index.css">
+
+    <script type="text/javascript"
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+</head>
+
+<body>
+    <main>
+        <h1>Datos</h1>
+
+        <div id="resultados">
+            <p id="resultadoAngulo"></p>
+            <p id="resultadoPeso"></p>
+            <p id="resultadoTamañoPala"></p>
+            <!-- <p id="xd"></p>
+            <p id="xd2"></p> -->
+
+        </div>
+
+        <script>
+            // Recupera los datos de localStorage
+            const angulo = localStorage.getItem('angulo');
+            const peso = localStorage.getItem('peso');
+            const tamañoPala = localStorage.getItem('tamañoPala');
+
+            // Muestra los datos en la página usando MathJax
+            document.getElementById('resultadoAngulo').innerHTML = `Ángulo: \\( \\theta = ${angulo}° \\)`;
+            document.getElementById('resultadoPeso').innerHTML = `Peso: \\( m = ${peso} \\text{g},  ${peso / 1000} \\text{kg}  \\)`;
+            document.getElementById('resultadoTamañoPala').innerHTML = `Tamaño de la pala: \\( L = ${tamañoPala} \, \\text{cm} \\)`;
+
+            // document.getElementById('xd').innerHTML = `Radianes max 160 -> ${160 * (Math.PI / 180)}`;
+            // document.getElementById('xd2').innerHTML = `Radianes min 110 -> ${110 * (Math.PI / 180)}`;
+
+        </script>
+    </main>
+
+    <canvas id="catapultaCanvas"
+        width="1330"
+        height="370"></canvas>
+
+    <script src="../lib/canvas.cjs"></script>
+
+    <button id="lanzarBtn">Lanzar</button>
+
+    <script>
+        // Agregar el evento al botón "Lanzar"
+        document.getElementById('lanzarBtn').addEventListener('click', lanzar);
+    </script>
+
+    <div id="resultadosFisica"></div> <!-- Este div mostrará los resultados -->
+
+
+</body>
+
+</html>

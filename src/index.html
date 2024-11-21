@@ -1,0 +1,126 @@
+<!-- Referencias -->
+<!-- https://developer.mozilla.org/es/docs/Web/API/Canvas_API/Tutorial -->
+<!-- https://developer.mozilla.org/es/docs/Web/API/Canvas_API/Tutorial/Basic_usage -->
+<!-- https://www.mathjax.org/ -->
+<!-- https://docs.mathjax.org/en/latest/web/configuration.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <title>Catapulta</title>
+    <link rel="stylesheet"
+        href="../style/index.css">
+
+</head>
+
+<body>
+    <main>
+        <h1>Catapulta con Canvas</h1>
+        <dialog id="idDialogIntegrantes">
+            <h2>Integrantes</h2>
+            <ol start="1">
+                <li>Daniel Benjamin Perez Morales</li>
+                <li>Jeremy Joshua Perez Gonzales</li>
+                <li>Pedro Justino Cruz Perez</li>
+                <li>Gustavo Alexander Diaz Moreno</li>
+                <li>Ariel Cristopher Alvarez Zapata</li>
+                <li>Juan Alberto Hernandez Alvarez</li>
+                <img src="/images/Pedro.webp"
+                    alt="Pedro"
+                    width="150"
+                    height="150">
+                <img src="/images/Emilio.webp"
+                    alt="Emilio"
+                    width="150"
+                    height="150">
+                <img src="/images/Daniel.webp"
+                    alt="Daniel"
+                    width="150"
+                    height="150">
+                <img src="/images/Jeremy.webp"
+                    alt="Jeremy"
+                    width="150"
+                    height="150">
+                <img src="/images/Gabriel.webp"
+                    alt="Gabriel"
+                    width="150"
+                    height="150">
+                <img src="/images/Lester.webp"
+                    alt="Lester"
+                    width="150"
+                    height="150">
+                <img src="/images/Gustavo.webp"
+                    alt="Gustavo"
+                    width="150"
+                    height="150">
+                <img src="/images/Ariel.webp"
+                    alt="Ariel"
+                    width="150"
+                    height="150">
+
+            </ol>
+            <button id="cerrarModalIntegrantes">Cerrar</button>
+        </dialog>
+
+
+        <button id="verModalIntegrantes">Ver Integrantes</button>
+
+        <script src="../lib/modal.cjs"></script>
+
+        <form id="catapultaForm">
+            <fieldset>
+                <legend>Datos de entrada del programa</legend>
+
+                <div class="form-group">
+                    <label for="angulo">Ángulo:</label>
+                    <input id="angulo"
+                        name="angulo"
+                        type="number"
+                        min="130"
+                        max="160"
+                        placeholder="130&deg; - 160&deg;"
+                        required>
+                    <span id="anguloMsg"
+                        class="message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="peso">Peso (g):</label>
+                    <input id="peso"
+                        name="peso"
+                        type="number"
+                        min="12"
+                        max="100"
+                        step="0.1"
+                        placeholder="Ingrese el peso 12g - 100g"
+                        required>
+                    <span id="pesoMsg"
+                        class="message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="tamañoPala">Tamaño de la pala (en cm):</label>
+                    <input id="tamañoPala"
+                        name="tamañoPala"
+                        type="number"
+                        step="0.1"
+                        min="15"
+                        max="50"
+                        placeholder="Introduce el tamaño de la pala entre 15cm y 50cm"
+                        required>
+                    <span id="tamañoPalaMsg"
+                        class="message"></span>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </fieldset>
+        </form>
+
+        <script src="../lib/catapultaFormulario.cjs"></script>
+    </main>
+</body>
+
+</html>
